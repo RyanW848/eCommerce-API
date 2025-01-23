@@ -20,7 +20,7 @@ public class JwtService {
     @Value("${jwt.expiration}")
     private Long expiration;
 
-    private String generateToken(UserDetails userDetails) {
+    public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
         return createToken(claims, userDetails.getUsername());
     }
