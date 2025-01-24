@@ -29,13 +29,12 @@ A RESTful API for managing an eCommerce platform, built with **Spring Boot** and
    cd eCommerce-API
    ```
 
-2. Navigate to resources and add `application.properties`:
+2. Add `application.properties` to resources:
    ```
-   cd src/main/resources
-   touch application.properties
+   touch src/main/resources/application.properties
    ```
 
-3. Configure `application.properties`
+3. Configure `application.properties`:
    ```
    spring.application.name=eCommerce API
    
@@ -65,12 +64,12 @@ A RESTful API for managing an eCommerce platform, built with **Spring Boot** and
 
 ### Running the program
 
-1. Navigate to `src/main/java/com/ecommerceapi`
+1. Navigate to `src/main/java/com/ecommerceapi`:
    ```
    cd src/main/java/com/ecommerceapi
    ```
 
-2. Run `ECommerceApiApplication.java`
+2. Run `ECommerceApiApplication.java`:
 
 ### License
 
