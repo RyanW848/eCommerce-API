@@ -37,44 +37,38 @@ A RESTful API for managing an eCommerce platform, built with **Spring Boot** and
 
 3. Configure `application.properties`
    ```
-  spring.application.name=eCommerce API
-  # PostgreSQL database configuration
-  spring.datasource.url=jdbc:postgresql://localhost:5432/[database_name]
-  spring.datasource.username=[username]
-  spring.datasource.password=[password]
-  spring.datasource.driver-class-name=org.postgresql.Driver
+   spring.application.name=eCommerce API
+   
+   spring.datasource.url=jdbc:postgresql://localhost:5432/[database_name]
+   spring.datasource.username=[username]
+   spring.datasource.password=[password]
+   spring.datasource.driver-class-name=org.postgresql.Driver
   
-  spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
-  spring.jpa.show-sql=true
-  spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+   spring.jpa.show-sql=true
+   spring.jpa.hibernate.ddl-auto=update
   
+   spring.main.allow-bean-definition-overriding=true
   
-  # Server configuration
-  spring.main.allow-bean-definition-overriding=true
+   jwt.secret=[jwt_secret]
+   jwt.expiration=[jwt_expiration]
   
+   spring.mail.host=sandbox.smtp.mailtrap.io
+   spring.mail.port=2525
+   spring.mail.username=[email_username]
+   spring.mail.password=[email_password]
+   spring.mail.properties.mail.smtp.auth=true
+   spring.mail.properties.mail.smtp.starttls.enable=true
   
-  # JWT Configuration
-  jwt.secret=[jwt_secret]
-  jwt.expiration=[jwt_expiration]
-  
-  # Email Configuration (Mailtrap)
-  spring.mail.host=sandbox.smtp.mailtrap.io
-  spring.mail.port=2525
-  spring.mail.username=[mailtrap_username]
-  spring.mail.password=[mailtrap_password]
-  spring.mail.properties.mail.smtp.auth=true
-  spring.mail.properties.mail.smtp.starttls.enable=true
-  
-  # Server Configuration
-  server.port=8080
+   server.port=8080
    ```
 
 ### Running the program
 
 1. Navigate to `src/main/java/com/ecommerceapi`
-  ```
-  cd src/main/java/com/ecommerceapi
-  ```
+   ```
+   cd src/main/java/com/ecommerceapi
+   ```
 
 2. Run `ECommerceApiApplication.java`
 
