@@ -50,7 +50,7 @@ public class ProductController {
         return ResponseEntity.ok(productService.getProduct(id));
     }
     @GetMapping
-    public ResponseEntity<List<ProductListDTO>> getAllProducts(){
-        return ResponseEntity.ok(productService.getAllProducts());
+    public ResponseEntity<Page<ProductListDTO>> getAllProducts(@PageableDefault(size=10) Pageable pageable){
+        return ResponseEntity.ok(productService.getAllProducts(pageable));
     }
 }

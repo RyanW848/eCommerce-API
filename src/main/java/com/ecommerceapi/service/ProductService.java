@@ -69,8 +69,8 @@ public class ProductService {
         return productMapper.toDTO(product);
     }
 
-    public List<ProductListDTO> getAllProducts() {
-        return productRepository.findAllWithoutComments();
+    public Page<ProductListDTO> getAllProducts(Pageable pageable) {
+        return productRepository.findAllWithoutComments(pageable);
     }
     private String saveImage(MultipartFile image) throws  IOException{
         String fileName = UUID.randomUUID().toString()+"_"+image.getOriginalFilename();

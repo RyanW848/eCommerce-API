@@ -12,5 +12,5 @@ import java.util.List;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
     @Query("SELECT new com.ecommerceapi.dto.ProductListDTO(p.id, p.name, p.description, p.price, p.quantity, p.image) FROM Product p")
-    List<ProductListDTO> findAllWithoutComments();
+    Page<ProductListDTO> findAllWithoutComments(Pageable pageable);
 }
